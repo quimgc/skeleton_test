@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ac99cae56e611ad9ae139b4cbcd90f5",
+    "content-hash": "7f39ed081402c792c8acd0e83f6a23f3",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -2405,6 +2405,66 @@
             "time": "2017-07-29T19:30:02+00:00"
         },
         {
+            "name": "quimgc/skeleton",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../skeleton",
+                "reference": "e727b3c1452be316e40b8e1e479ebbeb5651517c",
+                "shasum": null
+            },
+            "require": {
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=5.4.3",
+                "squizlabs/php_codesniffer": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Quimgc\\Skeleton\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Quimgc\\Skeleton\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "check-style": [
+                    "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ],
+                "fix-style": [
+                    "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Quim Gonzalez Colat",
+                    "email": "quimgonzalez@iesebre.com",
+                    "homepage": "https://github.com/quimgc",
+                    "role": "Developer"
+                }
+            ],
+            "homepage": "https://github.com/quimgc/skeleton",
+            "keywords": [
+                "quimgc",
+                "skeleton"
+            ]
+        },
+        {
             "name": "ramsey/uuid",
             "version": "3.7.1",
             "source": {
@@ -4316,7 +4376,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "quimgc/skeleton": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
